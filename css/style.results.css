@@ -1,0 +1,305 @@
+html,
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #5A1818;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.header {
+    background: #54141C;
+    border-bottom: 2px solid rgba(189, 188, 188, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
+.header__inner {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+   
+
+    .h_logo {
+        max-height: 45px;
+        margin-left: 25px;
+        transition: all .6s;
+
+        &:hover {
+            border-bottom-left-radius: 25%;
+            border-bottom-right-radius: 25%;
+            box-shadow: -10px 10px 10px 4px rgba(0, 0, 0, 0.65);
+            background: linear-gradient(to right, #54141C, #3c0e13);
+        }
+    }
+
+    .menu__list {
+        display: flex;
+        list-style: none;
+    }
+
+    .menu__list-link {
+        text-transform: uppercase;
+        color: #E6CC9A;
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+        display: inline-block;
+        padding: 0.8vw;
+        transition: all .6s;
+        border-bottom: transparent;
+
+        &:hover {
+            outline: 4px solid linear-gradient(to right, #54141C, #3c0e13);
+            box-shadow: -10px 10px 10px 4px rgba(0, 0, 0, 0.65);
+            background: linear-gradient(to right, #54141C, #3c0e13);
+        }
+    }
+
+    .tel {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        padding: 0.1vw;
+        transition: all .6s;
+        border-bottom: transparent;
+
+        img {
+            height: 23px;
+            margin-right: 8px;
+        }
+
+        &:hover {
+            outline: 4px solid linear-gradient(to right, #54141C, #3c0e13);
+            box-shadow: -10px 10px 10px 4px rgba(0, 0, 0, 0.65);
+            background: linear-gradient(to right, #54141C, #3c0e13);
+        }
+    }
+
+    .phone {
+        color: rgb(230, 204, 154);
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 17px;
+        letter-spacing: 1.2px;
+    }
+}
+
+
+.results {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    color: #E6CC9A;
+    padding: 60px 20px; 
+    text-decoration: none;
+    text-align: center;
+
+    /* h1 {
+        text-transform: uppercase;
+        font-family: "Amaranth", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 3px;
+        display: inline-block;
+        border-bottom: 3px solid #E6CC9A;
+        padding-bottom: 5px;
+        margin: 0 auto;
+    } */
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+    
+    img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+        transition: transform 0.6s ease;
+    }
+
+    img:hover {
+        transform: scale(1.06);
+    }
+}
+
+
+.footer {
+    background-color: #54141C;
+    border-top: 2px solid rgba(189, 188, 188, 0.5);
+    box-shadow: 0px 4px 4px 7px rgba(0, 0, 0, 0.7);
+
+}
+
+.footer__inner {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+
+    .geo {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    .mail {
+        display: flex;
+        align-items: center;
+        
+        img {
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    h3 {
+        color: #E6CC9A;
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 17px;
+        letter-spacing: 1.3px;
+        text-align: left;
+
+    }
+
+    .footer__contacts {
+        img {
+            margin: 0 10px;
+            width: 30px;
+        }
+    }
+}
+
+.burger {
+    margin-right: 25px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    border-block: 2px solid #E6CC9A;
+    width: 24px;
+    height: 18px;
+display: none;
+    span {
+        height: 2px;
+        background-color: #E6CC9A;
+        display: block;
+    }
+
+    
+}
+
+@media(max-width: 950px) {
+    .h_logo {
+        height: 40px;
+    }
+
+    .burger {
+        display: block;
+        z-index: 9999;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+        height: 200px;
+        padding-top: 20px;
+        row-gap: 30px;
+        background-color: rgba(84, 20, 28, 0.8);
+        z-index: 100;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .main-page {
+        img {
+            width: 330px;
+            top: 26vh;
+        }
+
+        p {
+            font-size: 35px;
+        }
+    }
+
+    .footer__inner .mail {
+        display: none;
+    }
+
+    .practice {
+        ul {
+            font-size: 15px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .footer__inner .footer__contacts {
+        img {
+            margin: 0 4px;
+            width: 20px;
+        }
+    }
+
+    .footer__inner .geo {
+        h3 {
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        img {
+            height: 15px;
+            margin-right: 5px;
+        }
+    }
+}
