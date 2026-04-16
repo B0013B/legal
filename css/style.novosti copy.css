@@ -5,7 +5,8 @@ body {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #5A1818;
 }
 
@@ -39,7 +40,7 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-   
+
 
     .h_logo {
         max-height: 45px;
@@ -109,76 +110,121 @@ a {
     }
 }
 
-
-.results {
-    
+.novosti {
     box-sizing: border-box;
     width: 100%;
     min-height: calc(100vh - 120px);
-    color: #E6CC9A;
-    padding: 60px 20px; 
-    text-decoration: none;
+    padding: 60px 20px;
+
+    .news {
+        display: flex;
+        flex-wrap: wrap;
+        /* переносить відео на наступний рядок при звуженні */
+        gap: 30px;
+        /* відстань між відео */
+        justify-content: center;
+        /* вирівнювання по центру */
+    }
+
+    .news-item {
+        row-gap: 15px;
+        flex: 1 1 180px;
+        /* мін ширина 200px, може рости */
+        max-width: 300px;
+        /* максимальна ширина одного відео */
+        display: flex;
+        flex-direction: column;
+        /* відео + текст зверху/знизу */
+        align-items: center;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(4px);
+
+        /* фон блоку */
+        padding: 10px;
+        border-radius: 12px;
+        /* округлені кути */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* тінь */
+        transition: transform 0.3s;
+        /* ефект при наведенні */
+    }
+
+    .news-item:hover {
+        transform: translateY(-7px);
+        /* легке підняття при наведенні */
+    }
+
+    .news-item iframe {
+        width: 100%;
+        /* адаптивна ширина під контейнер */
+        aspect-ratio: 16/9;
+        /* зберігає пропорції відео */
+        border-radius: 8px;
+        /* трохи округлити кути плеєра */
+        margin-bottom: 20px;
+        /* відступ між відео та текстом */
+    }
+
+    .news-title {
+        color: #E6CC9A;
+        font-family: "Amaranth", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        text-align: center;
+        margin: 0;
+
+    }
 }
 
-
-.card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    font-family: "Amaranth", sans-serif; 
-}
-
-.card-item {
-    max-width: 350px;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
-}
-
-/* контейнер картинки */
-.card-img {
-    position: relative;
-    display: block;
-    overflow: hidden;
-}
-
-/* картинка */
-.card-img img {
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* затемнення тільки тут */
-.card-img::after {
-    content: "";
+#modalVideo {
+    width: 80%;
+    height: 80%;
+}
+
+.video-close {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.5s ease;
-}
-.card-item:hover {
-    transform: translateY(-5px);
-}
-/* hover */
-.card-item:hover img {
-    transform: scale(1.04);
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
 }
 
-.card-item:hover .card-img::after {
-    background: rgba(0, 0, 0, 0.35);
-}
-.card-item h4 {
-    margin: 10px 0 5px;
-    font-size: 16px;
-    font-weight: 500;
+.video-wrapper {
+    position: relative;
+    width: 100%;
 }
 
-.card-item p {
-    margin: 10px 5px;
-    color: #777;
-    font-size: 14px;
-    font-weight: 400;
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
 }
+
+.video-click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
 
 
 
@@ -210,7 +256,7 @@ a {
     .mail {
         display: flex;
         align-items: center;
-        
+
         img {
             height: 20px;
             margin-right: 8px;
@@ -244,14 +290,15 @@ a {
     border-block: 2px solid #E6CC9A;
     width: 24px;
     height: 18px;
-display: none;
+    display: none;
+
     span {
         height: 2px;
         background-color: #E6CC9A;
         display: block;
     }
 
-    
+
 }
 
 @media(max-width: 950px) {
