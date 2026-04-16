@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://legalwin.com.ua/</loc>
+    <lastmod>2025-05-23T08:04:17+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/comanda.html</loc>
+    <lastmod>2025-05-23T08:04:17+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/specializ.html</loc>
+    <lastmod>2025-05-23T08:04:17+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/dovira.html</loc>
+    <lastmod>2025-05-23T08:04:17+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/results.html</loc>
+    <lastmod>2025-05-23T08:04:17+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/contacts.html</loc>
+    <lastmod>2025-05-23T08:04:17+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-kviten.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-berezen2.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-berezen.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-gryden2024.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-listopad2024.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-zhovten2024.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://legalwin.com.ua/result/rez-veresen2024.html</loc>
+    <lastmod>2025-05-22T11:24:17+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+</urlset>
