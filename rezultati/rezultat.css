@@ -1,0 +1,421 @@
+html,
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #5A1818;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.header {
+    background: #54141C;
+    border-bottom: 2px solid rgba(189, 188, 188, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
+.header__inner {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+    .h_logo {
+        max-height: 45px;
+        margin-left: 25px;
+        transition: all .5s ease;
+    }
+
+    .h_logo:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+
+    .menu__list {
+        display: flex;
+        list-style: none;
+    }
+
+    .menu__list-link {
+        text-transform: uppercase;
+        color: #E6CC9A;
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+        display: inline-block;
+        padding: 8px 10px;
+        transition: all .5s ease;
+        border-bottom: transparent;
+        position: relative;
+    }
+
+    .menu__list-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 4px;
+        width: 0;
+        height: 1.5px;
+        background: #E6CC9A;
+        transform: translateX(-50%);
+        transition: 0.5s ease;
+    }
+
+    .menu__list-link:hover::after {
+        width: 70%;
+    }
+
+    .menu__list-link:hover {
+        color: #fff8ed;
+        transform: translateY(-1px);
+    }
+
+
+    .tel {
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        gap: 8px;
+        transition: all .5s ease;
+
+        img {
+            height: 23px;
+            margin-right: 8px;
+        }
+    }
+
+    .tel:hover {
+        transform: translateY(-1.3px);
+        opacity: 0.9;
+    }
+
+    .phone {
+        color: rgb(230, 204, 154);
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 17px;
+        letter-spacing: 1.2px;
+        transition: all .5s ease;
+    }
+
+    .tel:hover .phone {
+        color: #fff8ed;
+    }
+}
+
+.resultat {
+    min-height: calc(100vh - 120px);
+    width: 100%;
+    padding: 40px;
+}
+
+.result-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(230, 204, 154, 0.25);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.result-link .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    flex-shrink: 0;
+    /* 🔥 не дає стискатись */
+    border-radius: 10px;
+    background: rgba(230, 204, 154, 0.08);
+    border: 1px solid rgba(230, 204, 154, 0.2);
+}
+
+.result-link .icon img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.7s ease;
+    opacity: 0.85;
+}
+
+.back-link {
+    justify-content: center;
+    gap: 12px;
+    max-width: 250px;
+    margin: 50px auto 0;
+    /* центрує сам блок */
+    background: transparent;
+    border: 1px solid rgba(230, 204, 154, 0.4);
+}
+
+.back-link .back-icon {
+    display: flex;
+    align-items: center;
+}
+
+.result-link .back-icon img {
+    width: 35px;
+    height: auto;
+    transition: all 0.7s ease;
+    opacity: 0.85;
+}
+
+.result-link .back-text {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #E6CC9A;
+    font-family: "Amaranth", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.result-link:hover .icon img {
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+.result-link .text {
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #E6CC9A;
+    font-family: "Amaranth", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.result-link:hover {
+    border-color: rgba(230, 204, 154, 0.6);
+    transform: translateX(6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.result-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(230, 204, 154, 0.12),
+            transparent);
+    transition: 0.6s ease;
+}
+
+.result-link:hover::before {
+    left: 100%;
+}
+
+
+.footer {
+    background-color: #54141C;
+    border-top: 2px solid rgba(189, 188, 188, 0.5);
+    box-shadow: 0px 4px 4px 7px rgba(0, 0, 0, 0.7);
+}
+
+.footer__inner {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+
+    .geo {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    .mail {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    h3 {
+        color: #E6CC9A;
+        font-family: "Arsenal SC", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 17px;
+        letter-spacing: 1.3px;
+        text-align: left;
+
+    }
+
+    .footer__inner:hover {
+        color: #fff;
+        transform: translateY(-1px);
+    }
+
+    .footer__contacts {
+        img {
+            margin: 0 10px;
+            width: 30px;
+        }
+    }
+}
+
+.burger {
+    margin-right: 25px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    border-block: 2px solid #E6CC9A;
+    width: 24px;
+    height: 18px;
+    display: none;
+
+    span {
+        height: 2px;
+        background-color: #E6CC9A;
+        display: block;
+    }
+}
+
+@media(max-width: 1050px) {
+    .h_logo {
+        height: 40px;
+    }
+
+    .burger {
+        display: block;
+        z-index: 9999;
+    }
+
+    .menu {
+        position: fixed;
+        inset: 0;
+
+        background: linear-gradient(180deg,
+                rgba(84, 20, 28, 0.85),
+                rgba(0, 0, 0, 0.4));
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 0.4s ease;
+        z-index: 999;
+    }
+
+    nav.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu__list-link {
+        font-size: 26px;
+        color: #E6CC9A;
+
+        padding: 0;
+        letter-spacing: 1.5px;
+
+        position: relative;
+        transition: 0.7s;
+    }
+
+    .menu__list-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #E6CC9A;
+        transition: width 0.4s ease;
+    }
+
+    .menu__list-link:hover::after {
+        width: 100%;
+    }
+
+
+
+    .footer__inner .mail {
+        display: none;
+    }
+
+    .practice {
+        ul {
+            font-size: 15px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .footer__inner .footer__contacts {
+        img {
+            margin: 0 4px;
+            width: 20px;
+        }
+    }
+
+    .footer__inner .geo {
+        h3 {
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        img {
+            height: 15px;
+            margin-right: 5px;
+        }
+    }
+}
