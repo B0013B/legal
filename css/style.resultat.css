@@ -215,7 +215,7 @@ a {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 500;
-    color: #FEF6F2;
+    color: #E6CC9A;
     font-family: "Amaranth", sans-serif;
 
     max-width: 90%;
@@ -223,7 +223,7 @@ a {
 
 /* акцент */
 .blok_result:hover .top__item-text {
-    color: #E6CC9A;
+    color: #FEF6F2;
 }
 
 
