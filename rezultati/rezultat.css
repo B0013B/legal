@@ -409,7 +409,7 @@ a {
     }
 
     .result-link .text {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .result-link .icon {
@@ -458,14 +458,12 @@ a {
 
     .result-link {
         flex-direction: row;
-        align-items: flex-start;
         gap: 12px;
-
         padding: 10px 14px;
     }
 
     .result-link .text {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.35;
     }
 
@@ -492,7 +490,7 @@ a {
 }
 @media(max-width: 360px) {
     .result-link .text {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .result-link {
