@@ -214,6 +214,7 @@ a {
     color: #E6CC9A;
     font-family: "Amaranth", sans-serif;
     transition: all 0.3s ease;
+    text-align: justify;
 }
 
 .result-link:hover {

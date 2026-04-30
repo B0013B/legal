@@ -217,8 +217,8 @@ a {
     font-weight: 500;
     color: #E6CC9A;
     font-family: "Amaranth", sans-serif;
-
-    max-width: 90%;
+    max-width: 85%;
+    text-align: justify;
 }
 
 /* акцент */
@@ -227,8 +227,6 @@ a {
 }
 
 
-
-    
 .footer {
     background-color: #54141C;
     border-top: 2px solid rgba(189, 188, 188, 0.5);
